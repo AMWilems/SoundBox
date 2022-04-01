@@ -21,11 +21,16 @@ def Next_Song_Message():
 def Last_Song_Message():
     lcd.lcd_display_string("Last Song...",1,0)
 
-def Scan_Card_Message():
+def Read_Card_Message():
     lcd.lcd_display_string("Please Scan",1,0)
     lcd.lcd_display_string("Card Now"2,0)
 
-def Write_Card():
-    lcd.lcd_display_string("
+def Write_Card_Messages():
+    lcd.lcd_display_string("Place tag",1,0)
+    lcd.lcd_display_string("on pad",2,0)
+    
 def Clear_Screen():
     lcd.lcd_clear()
+
+def Display_Time(): #For use if not playing anything 
+    
