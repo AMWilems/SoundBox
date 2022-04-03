@@ -77,7 +77,7 @@ def Call_Function_5():
 # =====================================================
 def Call_Function_6():
     LCD.Clear_Screen()
-    LCD.Write_Card_Messages()
+    LCD.Write_To_Card_Messages()
     RFID.Write_Text()  # calls write function from RFID_Functions.py
 
 
