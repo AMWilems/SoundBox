@@ -31,8 +31,8 @@ reader = SimpleMFRC522()
 # =====================================================
 def Call_Function_1():
     LCD.Last_Song_Message()
-    LCD.Artist_Info("my balogne has a first name")
-    LCD.Song_info("its big chungus long schlong")
+    #LCD.Artist_Info("my balogne has a first name")
+    #LCD.Song_info("its big chungus long schlong")
 
 # =====================================================
 # play to be completed on press of button 2
