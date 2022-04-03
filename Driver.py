@@ -8,7 +8,8 @@
 from gpiozero import Button  # imports object of button
 from mfrc522 import SimpleMFRC522
 import RFID_Functions as RFID  # imports RFID_Functions file to allow read/write
-# function from placeholder buttons
+                               # function from placeholder buttons
+import LCD_Controller as LCD
 
 from RFID_Functions import Read
 from signal import pause
@@ -29,6 +30,8 @@ reader = SimpleMFRC522()
 # Last song to be completed on press of button 1
 # =====================================================
 def Call_Function_1():
+    LCD.Clear_Screen()
+    LCD.Play_Message()
     print("button 1 pressed\n")
 
 
@@ -36,6 +39,8 @@ def Call_Function_1():
 # play to be completed on press of button 2
 # =====================================================
 def Call_Function_2():
+    LCD.Clear_Screen()
+    LCD.Pause_Message()
     print("button 2 pressed\n")
 
 
@@ -46,6 +51,8 @@ def Call_Function_2():
 # pause to be completed on press of button 3
 # =====================================================
 def Call_Function_3():
+    LCD.Clear_Screen()
+    LCD.Next_Song_Message()
     print("button 3 pressed\n")
 
 
@@ -53,6 +60,7 @@ def Call_Function_3():
 # next song to be completed on press of button 4
 # =====================================================
 def Call_Function_4():
+    LCD.Last_Song_Message()
     print("button 4 pressed\n")
 
 
@@ -62,6 +70,8 @@ def Call_Function_4():
 # variable link to string contents
 # =====================================================
 def Call_Function_5():
+    LCD.Clear_Screen()
+    LCD.Read_Card_Message()
     print("scan card now\n")
     link = RFID.Read()  # calls read function from RFID_Functions.py
     # Sets string variable link to data read from RFID card
@@ -75,6 +85,8 @@ def Call_Function_5():
 # does not have screen at current time
 # =====================================================
 def Call_Function_6():
+    LCD.Clear_Screen()
+    LCD.Write_Card_Messages()
     RFID.Write_Text()  # calls write function from RFID_Functions.py
     print("card text write function completed\n")
 
