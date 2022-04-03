@@ -80,7 +80,7 @@ def Call_Function_6():
 # is pressed, calls the appropriate function to complete
 # the respective function
 # =====================================================
-
+LCD.lcd.lcd_clear()
 button_1.when_pressed = Call_Function_1
 button_2.when_pressed = Call_Function_2
 button_3.when_pressed = Call_Function_3
