@@ -14,14 +14,17 @@ def Play_Message():
 def Pause_Message():
     lcd.lcd_clear()
     lcd.lcd_display_string("Pausing...",1,2)
+    Wait_And_Clear()
 
 def Next_Song_Message():
     lcd.lcd_clear()
     lcd.lcd_display_string("Next Song...",1,0)
+    Wait_And_Clear()
 
 def Last_Song_Message():
     lcd.lcd_clear()
     lcd.lcd_display_string("Last Song...",1,0)
+    Wait_And_Clear()
 
 def Read_Card_Message():
     lcd.lcd_clear()
@@ -42,8 +45,15 @@ def Successful():
     lcd.lcd_clear()
     lcd.lcd_display_string("Written",1,0)
     lcd.lcd_display_string("Successfully",2,0)
+    Wait_And_Clear()
+    
 
 def Card_Contents(card_data):
     lcd.lcd_clear()
     lcd.lcd_display_string(card_data,1,0)
+    Wait_And_Clear()
+
+def Wait_And_Clear():
+    sleep(3)
+    lcd.lcd_clear()
     
