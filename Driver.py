@@ -31,39 +31,30 @@ reader = SimpleMFRC522()
 # =====================================================
 def Call_Function_1():
     LCD.Clear_Screen()
-    LCD.Play_Message()
-    print("button 1 pressed\n")
-
+    LCD.Last_Song_Message()
 
 # =====================================================
 # play to be completed on press of button 2
 # =====================================================
 def Call_Function_2():
     LCD.Clear_Screen()
-    LCD.Pause_Message()
-    print("button 2 pressed\n")
-
-
-
-
+    LCD.Play_Message()
 
 # =====================================================
 # pause to be completed on press of button 3
 # =====================================================
 def Call_Function_3():
     LCD.Clear_Screen()
-    LCD.Next_Song_Message()
-    print("button 3 pressed\n")
+    LCD.Pause_Message()
 
 
 # =====================================================
 # next song to be completed on press of button 4
 # =====================================================
 def Call_Function_4():
-    LCD.Last_Song_Message()
-    print("button 4 pressed\n")
-
-
+    LCD.Clear_Screen()
+    LCD.Next_Song_Message()
+    
 # =====================================================
 # read card function call. takes no input
 # assigns data gathered from RFID card, and set
@@ -88,7 +79,6 @@ def Call_Function_6():
     LCD.Clear_Screen()
     LCD.Write_Card_Messages()
     RFID.Write_Text()  # calls write function from RFID_Functions.py
-    print("card text write function completed\n")
 
 
 # =====================================================
@@ -96,6 +86,7 @@ def Call_Function_6():
 # is pressed, calls the appropriate function to complete
 # the respective function
 # =====================================================
+
 button_1.when_pressed = Call_Function_1
 button_2.when_pressed = Call_Function_2
 button_3.when_pressed = Call_Function_3

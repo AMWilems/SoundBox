@@ -9,6 +9,7 @@ import RPi.GPIO as GPIO             #imports gpio controls to work with
                                     #Rasberry pi pin numbering convention
 from mfrc522 import SimpleMFRC522   #Imports library for RFID basic functions
                                     #on hw level
+import LCD_Controller as LCD
 
 GPIO.setwarnings(False)             #disables warning from hw as RFID reader
                                     #throws warning of already in use
@@ -25,10 +26,13 @@ text = "ERROR: Read unsuccessful"   #placeholder for if card is not read, displa
 #takes none, returns string
 #=====================================================
 def Read():
+    
     try:                            #while loop that keeps running until action inside is completed
         id, text = reader.read()    #read RFID card, gather card ID and text
     finally:                        #after try has completed, returns string text
-       return text 
+        LCD.Clear_Screen()
+        LCD.Card_Contents(text)
+        return text 
         
     
 #=====================================================
@@ -41,8 +45,8 @@ def Write_Text():
     try:                            
         text = input('New data:')   #asks user to enter information needed on the card for
                                     #new playlist to be set to play
-        print("Place tag on pad")
         reader.write(text)          #waits for RFID to be detected before writing data to RFID card
         
     finally:
-        print("Written Successfully")
+        LCD.Clear_Screen()
+        LCD.Successful()

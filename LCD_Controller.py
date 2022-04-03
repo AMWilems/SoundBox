@@ -23,9 +23,22 @@ def Read_Card_Message():
     lcd.lcd_display_string("Please Scan",1,0)
     lcd.lcd_display_string("Card Now",2,0)
 
-def Write_Card_Messages():
+def New_Data():
+    lcd.lcd_display_string("Please input",1,0)
+    lcd.lcd_display_string("new data. ^.^ ",2,0)
+    
+def Write_To_Card_Messages():
     lcd.lcd_display_string("Place tag",1,0)
     lcd.lcd_display_string("on pad",2,0)
+
+def Successful():
+    lcd.lcd_display_string("Written",1,0)
+    lcd.lcd_display_string("Successfully",2,0)
     
 def Clear_Screen():
     lcd.lcd_clear()
+
+def Card_Contents(card_data):
+    lcd.lcd_display_string("Card Data",1,0)
+    lcd.lcd_display_string(card_data,2,0)
+    
