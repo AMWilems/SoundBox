@@ -16,7 +16,7 @@ display = drivers.Lcd()
 try:
 	print("Press CTRL + C to stop this script!")
 
-	def long_string(display, text='', num_line=1, num_cols=16):
+	def long_string(display, text='', num_line, num_cols=16):
 		""" 
 		Parameters: (driver, string to print, number of line to print, number of columns of your display)
 		Return: This function send to display your scrolling string.
@@ -44,6 +44,7 @@ try:
 
 	while True:
 		# An example of infinite scrolling text
+		long_string(display, "Hello friend! This is a long text!", 1)
 		long_string(display, "Hello friend! This is a long text!", 2)
 except KeyboardInterrupt:
 	# If there is a KeyboardInterrupt (when you press ctrl+c), exit the program and cleanup
