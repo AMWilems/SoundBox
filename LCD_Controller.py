@@ -54,6 +54,6 @@ def Card_Contents(card_data):
     Wait_And_Clear()
 
 def Wait_And_Clear():
-    sleep(3)
+    sleep(1.5)
     lcd.lcd_clear()
     
