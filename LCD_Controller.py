@@ -45,6 +45,5 @@ def Successful():
 
 def Card_Contents(card_data):
     lcd.lcd_clear()
-    lcd.lcd_display_string("Card Data",1,0)
-    lcd.lcd_display_string(card_data,2,0)
+    lcd.lcd_display_string(card_data,1,0)
     
