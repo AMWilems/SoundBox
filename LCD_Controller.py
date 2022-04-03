@@ -6,8 +6,7 @@ from time import sleep
 import I2C_LCD_driver
 
 lcd = I2C_LCD_driver.lcd()
-
-def Display_Song_Info():
+    
     
 def Play_Message():
     lcd.lcd_display_string("Playing...",1,2)
