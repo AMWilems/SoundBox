@@ -31,6 +31,8 @@ reader = SimpleMFRC522()
 # =====================================================
 def Call_Function_1():
     LCD.Last_Song_Message()
+    LCD.Artist_Info("my balogne has a first name")
+    LCD.Song_info("its big chungus long schlong")
 
 # =====================================================
 # play to be completed on press of button 2
@@ -87,6 +89,7 @@ button_3.when_pressed = Call_Function_3
 button_4.when_pressed = Call_Function_4
 button_5.when_pressed = Call_Function_5
 button_6.when_pressed = Call_Function_6
+
 
 pause()  # Tells the program to wait for an action to happen
 # then continue the program without ending
