@@ -22,7 +22,7 @@ def Last_Song_Message():
 
 def Read_Card_Message():
     lcd.lcd_display_string("Please Scan",1,0)
-    lcd.lcd_display_string("Card Now"2,0)
+    lcd.lcd_display_string("Card Now",2,0)
 
 def Write_Card_Messages():
     lcd.lcd_display_string("Place tag",1,0)
