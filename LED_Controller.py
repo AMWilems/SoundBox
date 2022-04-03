@@ -2,7 +2,7 @@ from gpiozero import LED    #Imports LED control function from gpiozero
 from time import sleep      #calls in sleep function to have program wait
                             
 flash_time = 0.15           #Variable sets the time in seconds the system will wait before turning the LED back off
-LED_location = 20           #Variable for GPIO channel location of LED
+LED_location = 22           #Variable for GPIO channel location of LED
 led = LED(LED_location)     #creates an instance of LED, sets LED_location as pin to get data from 
 
 #=====================================================
