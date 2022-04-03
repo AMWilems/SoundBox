@@ -30,8 +30,8 @@ def Read():
     try:                            #while loop that keeps running until action inside is completed
         id, text = reader.read()    #read RFID card, gather card ID and text
     finally:                        #after try has completed, returns string text
-        LCD.Clear_Screen()
         LCD.Card_Contents(text)
+        
         return text 
         
     
@@ -48,5 +48,4 @@ def Write_Text():
         reader.write(text)          #waits for RFID to be detected before writing data to RFID card
         
     finally:
-        LCD.Clear_Screen()
         LCD.Successful()

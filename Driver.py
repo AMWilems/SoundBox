@@ -30,21 +30,18 @@ reader = SimpleMFRC522()
 # Last song to be completed on press of button 1
 # =====================================================
 def Call_Function_1():
-    LCD.Clear_Screen()
     LCD.Last_Song_Message()
 
 # =====================================================
 # play to be completed on press of button 2
 # =====================================================
 def Call_Function_2():
-    LCD.Clear_Screen()
     LCD.Play_Message()
 
 # =====================================================
 # pause to be completed on press of button 3
 # =====================================================
 def Call_Function_3():
-    LCD.Clear_Screen()
     LCD.Pause_Message()
 
 
@@ -52,7 +49,6 @@ def Call_Function_3():
 # next song to be completed on press of button 4
 # =====================================================
 def Call_Function_4():
-    LCD.Clear_Screen()
     LCD.Next_Song_Message()
     
 # =====================================================
@@ -61,7 +57,6 @@ def Call_Function_4():
 # variable link to string contents
 # =====================================================
 def Call_Function_5():
-    LCD.Clear_Screen()
     LCD.Read_Card_Message()
     print("scan card now\n")
     link = RFID.Read()  # calls read function from RFID_Functions.py
@@ -76,7 +71,6 @@ def Call_Function_5():
 # does not have screen at current time
 # =====================================================
 def Call_Function_6():
-    LCD.Clear_Screen()
     LCD.Write_To_Card_Messages()
     RFID.Write_Text()  # calls write function from RFID_Functions.py
 
