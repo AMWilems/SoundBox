@@ -9,15 +9,11 @@ from gpiozero import Button  # imports object of button
 from mfrc522 import SimpleMFRC522
 import RFID_Functions as RFID  # imports RFID_Functions file to allow read/write
 # function from placeholder buttons
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
+
 from RFID_Functions import Read
 from signal import pause
 from time import sleep
 
-DEVICE_ID = "YOUR_DEVICE_ID"
-CLIENT_ID = "94b3a66356c1485490ca7d0768206d4994b3a66356c1485490ca7d0768206d49"
-CLIENT_SECRET = "5ed3d79e1e2c403985f0e148a188db7a"
 link = ""  # holds link set on RFID card
 
 button_1 = Button(6)  # creation of button object to map
@@ -28,10 +24,6 @@ button_5 = Button(12)
 button_6 = Button(16)
 
 reader = SimpleMFRC522()
-sp = spotipy.Spotify(
-    auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, redirect_uri="http://localhost:8080",
-                              scope="user-read-playback-state, user-modify-playback-state"))
-
 
 # =====================================================
 # Last song to be completed on press of button 1
@@ -47,8 +39,7 @@ def Call_Function_2():
     print("button 2 pressed\n")
 
 
-sp.start_playback(device_id=DEVICE_ID, uris='spotify:track:5uvosCdMlFdTXhoazkTI5R')
-sleep(2)
+
 
 
 # =====================================================
