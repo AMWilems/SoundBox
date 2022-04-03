@@ -34,7 +34,7 @@ try:
 
 
 	# Example of short string
-	long_string(display, "Hello World!", 1)
+	long_string(display, "Hello World, hope you have a wonderful day!", 1)
 	sleep(1)
 
 	# Example of long string
