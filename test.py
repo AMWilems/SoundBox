@@ -11,7 +11,6 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                client_secret=CLIENT_SECRET,
                                                redirect_uri="http://localhost:8080/",
                                                scope="user-read-playback-state,user-modify-playback-state"))
-sp.transfer_playback(device_id=DEVICE_ID, force_play=False)
 
 # sp.pause_playback(device_id=DEVICE_ID) pause
 # sp.previous_track(device_id=DEVICE_ID) last track
