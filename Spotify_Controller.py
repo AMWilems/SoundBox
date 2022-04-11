@@ -10,6 +10,7 @@ sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, redirect_uri="http://localhost:8080",
                               scope="user-read-playback-state, user-modify-playback-state"))
 
+sp.transfer_playback(device_id=DEVICE_ID, force_play=False)
 
 sp.start_playback(device_id=DEVICE_ID, uris='spotify:track:5uvosCdMlFdTXhoazkTI5R')
 sleep(2)
