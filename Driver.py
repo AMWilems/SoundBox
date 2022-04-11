@@ -10,7 +10,7 @@ from mfrc522 import SimpleMFRC522
 import RFID_Functions as RFID  # imports RFID_Functions file to allow read/write
                                # function from placeholder buttons
 import LCD_Controller as LCD
-
+import Spotify_Controller as Spotify
 from RFID_Functions import Read
 from signal import pause
 from time import sleep
@@ -29,28 +29,30 @@ reader = SimpleMFRC522()
 # =====================================================
 # Last song to be completed on press of button 1
 # =====================================================
-def Call_Function_1():
+def Last_Song_Controller():
+    Spotify.Previous()
     LCD.Last_Song_Message()
-    #LCD.Artist_Info("my balogne has a first name")
-    #LCD.Song_info("its big chungus long schlong")
 
 # =====================================================
 # play to be completed on press of button 2
 # =====================================================
-def Call_Function_2():
+def Play_Controller():
+    Spotify.Play(link)
     LCD.Play_Message()
 
 # =====================================================
 # pause to be completed on press of button 3
 # =====================================================
-def Call_Function_3():
+def Pause_Controller():
+    Spotify.Pause()
     LCD.Pause_Message()
 
 
 # =====================================================
 # next song to be completed on press of button 4
 # =====================================================
-def Call_Function_4():
+def Next_Song_Controller():
+    Spotify.Next()
     LCD.Next_Song_Message()
     
 # =====================================================
@@ -58,13 +60,10 @@ def Call_Function_4():
 # assigns data gathered from RFID card, and set
 # variable link to string contents
 # =====================================================
-def Call_Function_5():
+def Read_Card_Controller():
     LCD.Read_Card_Message()
-    print("scan card now\n")
     link = RFID.Read()  # calls read function from RFID_Functions.py
-    # Sets string variable link to data read from RFID card
-    print("Card Contents: ", link, "\n")
-
+                        # Sets string variable link to data read from RFID card
 
 # =====================================================
 # Write card function call. takes no input
@@ -72,7 +71,7 @@ def Call_Function_5():
 # currently used for dev only as final product
 # does not have screen at current time
 # =====================================================
-def Call_Function_6():
+def Write_Card_Controller():
     LCD.Write_To_Card_Messages()
     RFID.Write_Text()  # calls write function from RFID_Functions.py
 
@@ -83,12 +82,12 @@ def Call_Function_6():
 # the respective function
 # =====================================================
 LCD.lcd.lcd_clear()
-button_1.when_pressed = Call_Function_1
-button_2.when_pressed = Call_Function_2
-button_3.when_pressed = Call_Function_3
-button_4.when_pressed = Call_Function_4
-button_5.when_pressed = Call_Function_5
-button_6.when_pressed = Call_Function_6
+button_1.when_pressed = Last_Song_Controller
+button_2.when_pressed = Play_Controller
+button_3.when_pressed = Pause_Controller
+button_4.when_pressed = Next_Song_Controller
+button_5.when_pressed = Read_Card_Controller
+button_6.when_pressed = Write_Card_Controller
 
 
 pause()  # Tells the program to wait for an action to happen
