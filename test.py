@@ -12,11 +12,17 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                redirect_uri="http://localhost:8080/",
                                                scope="user-read-playback-state,user-modify-playback-state"))
 
-# sp.pause_playback(device_id=DEVICE_ID) pause
-# sp.previous_track(device_id=DEVICE_ID) last track
-sp.start_playback(device_id=DEVICE_ID, uris="spotify:track:6mrRJpEOqNEKygu4fesH1e")
+def Pause():
+  sp.pause_playback(device_id=DEVICE_ID) pause
+  
+def Previous():
+  sp.previous_track(device_id=DEVICE_ID) last track
 
-# sp.next_track(device_id=DEVICE_ID) next track
+def Play():
+  sp.start_playback(device_id=DEVICE_ID, uris="spotify:track:6mrRJpEOqNEKygu4fesH1e")
+def Next():
+  sp.next_track(device_id=DEVICE_ID) next track
+  
 # sp.search() if start playback works, continue with finding information
 # information
 
