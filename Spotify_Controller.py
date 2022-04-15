@@ -11,6 +11,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                scope="user-read-playback-state,user-modify-playback-state"))
 
 def Pause():
+  
   print("in")
   try:
     sp.pause_playback(device_id=DEVICE_ID) #pause
@@ -25,7 +26,7 @@ def Previous():
 
 def Play(spot_ID = ""):
   print ("Play")
-  full_path = "spotify:track:" + spot_ID
+  full_path = ("spotify:track:" + spot_ID)
   sp.transfer_playback(device_id=DEVICE_ID, force_play=False)
   sp.start_playback(device_id=DEVICE_ID, uris = full_path)
   print("done")
