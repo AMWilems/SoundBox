@@ -31,7 +31,7 @@ def Read():
         id, text = reader.read()    #read RFID card, gather card ID and text
     finally:                        #after try has completed, returns string text
         LCD.Card_Contents(text)
-        print text
+        print(text)
         
         return text 
         
@@ -45,7 +45,7 @@ def Read():
 def Write_Text():
     try:                            
         text = input('New data:')   #asks user to enter information needed on the card for
-        print text                            #new playlist to be set to play
+                                    #new playlist to be set to play
         reader.write(text)          #waits for RFID to be detected before writing data to RFID card
         
     finally:
