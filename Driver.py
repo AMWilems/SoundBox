@@ -30,30 +30,34 @@ reader = SimpleMFRC522()
 # Last song to be completed on press of button 1
 # =====================================================
 def Last_Song_Controller():
-    Spotify.Previous()
     LCD.Last_Song_Message()
+    Spotify.Previous()
+    
 
 # =====================================================
 # play to be completed on press of button 2
 # =====================================================
 def Play_Controller():
-    Spotify.Play(link)
     LCD.Play_Message()
+    Spotify.Play(link)
+    
 
 # =====================================================
 # pause to be completed on press of button 3
 # =====================================================
 def Pause_Controller():
-    Spotify.Pause()
     LCD.Pause_Message()
+    Spotify.Pause()
+    
 
 
 # =====================================================
 # next song to be completed on press of button 4
 # =====================================================
 def Next_Song_Controller():
-    Spotify.Next()
     LCD.Next_Song_Message()
+    Spotify.Next()
+    
     
 # =====================================================
 # read card function call. takes no input
