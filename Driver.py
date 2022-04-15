@@ -15,7 +15,7 @@ from RFID_Functions import Read
 from signal import pause
 from time import sleep
 
-link = ""  # holds link set on RFID card
+link = "4cOdK2wGLETKBW3PvgPWqT?si=5567b001dd3b495f"  # holds link set on RFID card
 
 button_1 = Button(6)  # creation of button object to map
 button_2 = Button(26)  # respective GPIO ports to input singal in boolean form
