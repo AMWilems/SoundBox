@@ -12,8 +12,11 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
 
 def Pause():
   print("in")
-  sp.pause_playback(device_id=DEVICE_ID) #pause
-  print("done")
+  try:
+    sp.pause_playback(device_id=DEVICE_ID) #pause
+    
+  finally:
+      print("done")
   
 def Previous():
   print("prev")
