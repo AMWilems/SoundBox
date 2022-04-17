@@ -1,3 +1,7 @@
+#=====================================================
+#Author: Alexander Wilems
+#=====================================================
+
 from gpiozero import LED    #Imports LED control function from gpiozero
 from time import sleep      #calls in sleep function to have program wait
                             

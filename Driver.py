@@ -15,7 +15,7 @@ from RFID_Functions import Read
 from signal import pause
 from time import sleep
 
-link = "4cOdK2wGLETKBW3PvgPWqT?si=5567b001dd3b495f"  # holds link set on RFID card
+link = "5"  # holds link set on RFID card
 
 button_1 = Button(6)  # creation of button object to map
 button_2 = Button(26)  # respective GPIO ports to input singal in boolean form
@@ -31,7 +31,7 @@ reader = SimpleMFRC522()
 # =====================================================
 def Last_Song_Controller():
     LCD.Last_Song_Message()
-    Spotify.Previous()
+    Spotify_control(4)
     
 
 # =====================================================
@@ -39,7 +39,7 @@ def Last_Song_Controller():
 # =====================================================
 def Play_Controller():
     LCD.Play_Message()
-    Spotify.Play(link)
+    Spotify.Spotify_control(1)
     
 
 # =====================================================
@@ -47,7 +47,7 @@ def Play_Controller():
 # =====================================================
 def Pause_Controller():
     LCD.Pause_Message()
-    Spotify.Pause()
+    Spotify.Spotify_control(1)
     
 
 
@@ -56,7 +56,7 @@ def Pause_Controller():
 # =====================================================
 def Next_Song_Controller():
     LCD.Next_Song_Message()
-    Spotify.Next()
+    Spotify.Spotify_control(2)
     
     
 # =====================================================
