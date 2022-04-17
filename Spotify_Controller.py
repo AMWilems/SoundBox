@@ -2,7 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from time import sleep
 
-SPOTIPY_DEVICE_ID = '4ad2f55a4236cd5f7fc8a75f6bade1b337ae32a3' # change to rasperry pi device ID
+SPOTIPY_DEVICE_ID = 'b87867c30c93d315bd7a3a67efd57d7a8888506b' # change to rasperry pi device ID
 SPOTIPY_CLIENT_ID = '0b53ed2e631f47ddb7ef45582f666b71'
 SPOTIPY_CLIENT_SECRET = '47b8d86158f64d8b9cb70360d42bef71'
 scope = "user-read-playback-state, user-read-currently-playing"
