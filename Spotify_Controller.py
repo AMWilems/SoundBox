@@ -36,8 +36,7 @@ def Previous():
 
 def Spotify_control(choice):
     while True:
-        print("enter 1(Play), 2(Pause), 3(Next), 4(Previous)")
-        choice = int(input("enter choice\n"))
+        #choice = int(input("enter choice\n"))
         sp.transfer_playback(device_id=SPOTIPY_DEVICE_ID, force_play=False)
 
         if choice == 1:
