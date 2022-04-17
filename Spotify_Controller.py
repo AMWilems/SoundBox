@@ -5,7 +5,7 @@ from time import sleep
 SPOTIPY_DEVICE_ID = 'b87867c30c93d315bd7a3a67efd57d7a8888506b' # change to rasperry pi device ID
 SPOTIPY_CLIENT_ID = '2b690c77b1624824bb3209a3dc1f94f4'
 SPOTIPY_CLIENT_SECRET = 'fc9b969b85cf4f2280bde177ca5c2435'
-scope = "user-read-playback-state, user-read-currently-playing"
+scope = "user-read-playback-state, user-read-currently-playing" 
 
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET,
