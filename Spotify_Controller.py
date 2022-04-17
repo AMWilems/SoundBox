@@ -12,8 +12,32 @@ sp = spotipy.Spotify(
                               redirect_uri='http://localhost:8080/', scope=scope))
 
 
-def Spotify_control(choice): 
+def Play():
+    sp.start_playback(device_id=SPOTIPY_DEVICE_ID, uris=['spotify:track:7lT1dCz96jANsLAAADlfIg', 'spotify:track'
+                                                                                                                    ':1R28m5eWk1EV9FQ3puWrUp'])
+
+
+sleep(1)
+
+
+def Pause():
+    sp.pause_playback(device_id=SPOTIPY_DEVICE_ID)
+    sleep(1)
+
+
+def Next():
+    sp.next_track(device_id=SPOTIPY_DEVICE_ID)
+    sleep(1)
+
+
+def Previous():
+    sp.previous_track(device_id=SPOTIPY_DEVICE_ID)
+    sleep(1)
+
+def Spotify_control(choice):
     while True:
+        print("enter 1(Play), 2(Pause), 3(Next), 4(Previous)")
+        choice = int(input("enter choice\n"))
         sp.transfer_playback(device_id=SPOTIPY_DEVICE_ID, force_play=False)
 
         if choice == 1:
@@ -28,6 +52,3 @@ def Spotify_control(choice):
             break
         else:
             print("Error: Please pick a valid option.")
-
-
-Spotify_control(1);
